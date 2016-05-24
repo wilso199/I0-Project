@@ -71,8 +71,8 @@
 				</div>
 				<div id='skip'>SKIP IF NONE APPLY</div>
 				<div id='data'>
-					<div id='dataHeader' class='littleHeader'>Data<br>
-					<span>Link to data specific considerations<a href='https://spot.nwie.net/group/ADCServiceCatalog/TechDomainConsiderations/mdwiki.html#!index.md'>Data</a></span>
+					<div id='dataHeader' class='littleHeader'>Data<br/>
+					<span>Link to data specific considerations <a href='https://spot.nwie.net/group/ADCServiceCatalog/TechDomainConsiderations/mdwiki.html#!index.md'>Data</a></span>
 					</div>
 					<ol start='17'>
 						<li><span class='choiceSpanCopy'></span>Will you need to create or modify a new or existing database?</li>
@@ -105,7 +105,7 @@
 			$(document).ready(function(){
 				// copies all contents of choiceSpan into choiceSpanCopy
 				// (hard coded because if using .choiceSpan, the copy only applies to the first span or div) 
-				$(".choiceSpanCopy").html("<select name='processList[]'><option value='0'>0 (N/A)</option><option value='1'>1 (Yes)</option><option value='2'>2 (In Progress)</option><option value='3'>3 (No)</option></select>");
+				$(".choiceSpanCopy").html("<select name='technologyList[]'><option value='0'>0 (N/A)</option><option value='1'>1 (Yes)</option><option value='2'>2 (In Progress)</option><option value='3'>3 (No)</option></select>");
 			});
 		</script>
 	</body>
