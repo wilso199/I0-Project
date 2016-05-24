@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<title>I0-Checklist - People</title>
+	</head>
+	<body>
+		<div id='header'>
+			<h1>I0 Checklist - People</h1>
+		</div>
+		<div id='checklistInfo'>
+			<!-- Perhaps change this monstrosity into divs -->
+			<table>
+				<tr>
+					<td>Checklist Version</td><td>V 3.0  12/31/15</td>
+				</tr>
+				<tr>
+					<td>Date:</td><td><input type="text" name="globalChecklistData"></td>
+				</tr>
+				<tr>	
+					<td>Line:</td><td><input type="text" name="globalChecklistData"></td>
+				</tr>
+				<tr>
+					<td>Project/Release:</td><td><input type="text" name="globalChecklistData"></td>
+				</tr>
+				<tr>
+					<td>ADE:</td><td><input type="text" name="globalChecklistData"></td>
+				</tr>
+				<tr>
+					<td>ADL:</td><td><input type="text" name="globalChecklistData"></td>
+				</tr>
+			</table>
+		</div>
+		<div id='area'>
+			<h2>People</h2>
+			<form action="dummy_url" method="POST">
+			<div id='people'>
+				<div id='Roles'>
+					<div id='rolesHeader' class='littleHeader'>Roles</div>
+					<ol>
+						<li><span id="choiceSpan"><select name="peopleList[]">
+							<option value="0">0 (N/A)</option>
+							<option value="1">1 (Yes)</option>
+							<option value="2">2 (In Progress)</option>
+							<option value="3">3 (No)</option>
+							</select></span>Are all line roles staffed?</li>
+							<ol type="a">
+								<li><span class='choiceSpanCopy'></span>If no, is there a staffing plan in place?  Please explain</li>
+							</ol>
+						<li><span class='choiceSpanCopy'></span>Are the Project Leadership roles staffed, this includes Troika roles?</li>
+							<ol type="a">
+								<li><span class='choiceSpanCopy'></span>If no, is there a plan in place to staff these roles?  Please explain.</li>
+							</ol>
+						<li><span class='choiceSpanCopy'></span>If there are external dependencies, either not on the line or the project team,  do you have contact information? </li>
+						<li><span class='choiceSpanCopy'></span>Are all team members aware of their roles & responsibilities on the Nationwide Line?</li>
+					</ol>
+				</div>
+				<div id='Facilities'>
+					<div id='facilitiesHeader' class='littleHeader'>Facilities</div>
+					<ol>
+						<li><span class='choiceSpanCopy'></span>If needed, are all facilities in place for the line? (Space, VMS, monitors, hotel space, supplies, etc)</li>
+					</ol>
+				</div>
+				<div id='Training'>
+				<div id='trainingHeader' class='littleHeader'>Training</div>
+					<ol>
+						<li><span class='choiceSpanCopy'></span>Is there a need to address training gaps in Agile practices and/or technology stack?</li>
+							<ol type='a'>
+								<li><span class='choiceSpanCopy'></span>Agile methodology training needed in:</li>
+								<li><span class='choiceSpanCopy'></span>Technology training needed in:</li>
+							</ol>
+						<li><span class='choiceSpanCopy'></span>If applicable, will you complete a Process Awareness Session?</li>
+						<li><span class='choiceSpanCopy'></span>Are the ADE and ITDE / BSA Leader in agreement that the team is ready to start working on the project?</li>
+					</ol>
+				</div>
+			</div>
+		<input id="submitButton" type="submit" value="Submit">
+		</form>
+		</div>
+		<script src="jquery-1.12.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				// copies all contents of choiceSpan into choiceSpanCopy
+				// (hard coded because if using .choiceSpan, the copy only applies to the first span or div) 
+				$(".choiceSpanCopy").html("<select name='peopleList[]'><option value='0'>0 (N/A)</option><option value='1'>1 (Yes)</option><option value='2'>2 (In Progress)</option><option value='3'>3 (No)</option></select>");
+			});
+		</script>
+	</body>
+</html>
