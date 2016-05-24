@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<title>I0-Checklist - Technology</title>
+	</head>
+	<body>
+		<div id='header'>
+			<h1>I0 Checklist - Technology</h1>
+		</div>
+		<div id='area'>
+			<h2>Technology</h2>
+			<form action="dummy_url" method="POST">
+			<div id='technology'>
+				<div id='architecturAndDesign'>
+					<div id='architecturAndDesignHeader' class='littleHeader'>Architecture & Design</div>
+					<ol>
+						<li><span id="choiceSpan"><select name="technologyList[]">
+							<option value="0">0 (N/A)</option>
+							<option value="1">1 (Yes)</option>
+							<option value="2">2 (In Progress)</option>
+							<option value="3">3 (No)</option>
+							</select></span>Has the project architecture and design been reviewed by an ADC Architect or Consultant level developer?</li>
+						<ol type='a'>						
+							<li><span class='choiceSpanCopy'></span>If no, please explain. Answers of "N/A" will not be accepted</li>
+						</ol>
+						<li><span class='choiceSpanCopy'></span>Will there be technical debt as a result of this project?</li>
+						<li><span class='choiceSpanCopy'></span>Is there agreement with the BSA on ownership and management of Technical Debt items?</li>
+					</ol>
+				</div>
+				<div id='Software Engineering Practices'>
+					<div id='softwareHeader' class='littleHeader'>Software Engineering Practices</div>
+					<ol start='4'>
+						<li><span class='choiceSpanCopy'></span>Is the line using code quality standards?  Have you considered how they will be enforced?</li>
+						<li><span class='choiceSpanCopy'></span>Do you have a source code control strategy defined?  This should include comment format, branching & merging.</li>
+						<li><span class='choiceSpanCopy'></span>Are you planning to use automated build?</li>
+						<ol type='a'>
+							<li><span class='choiceSpanCopy'></span>Do you have automated build scripts that have been tested?</li>
+						</ol>
+						<li><span class='choiceSpanCopy'></span>Are you planning to use automated deploy?</li>
+						<ol type='a'>
+							<li><span class='choiceSpanCopy'></span>Do you have automated deploy scripts that have been tested?</li>
+						</ol>
+						<li><span class='choiceSpanCopy'></span>Do you have a continuous integration strategy defined? This should include how often you will integrate and how you will manage failed builds.</li>
+					</ol>
+				</div>
+				<div id='environments'>
+					<div id='environmentsHeader' class='littleHeader'>Environments</div>
+					<ol start='9'>
+						<li><span class='choiceSpanCopy'></span>Do you have all the necessary development tools installed, configured and ready for iteration 1?</li>
+						<li><span class='choiceSpanCopy'></span>Have all environments been configured and are ready for use?</li>
+						<ol type='a'>
+							<li><span class='choiceSpanCopy'></span>Development</li>
+							<li><span class='choiceSpanCopy'></span>Test</li>
+							<li><span class='choiceSpanCopy'></span>Production</li>
+						</ol>
+						<li><span class='choiceSpanCopy'></span>Do you have access to logs in each environment?</li>
+						<li><span class='choiceSpanCopy'></span>Have you engaged code migration to establish/update/validate migration scripts?</li>
+					</ol>
+				</div>
+				<div id='Test Automation'>
+					<div id='testHeader' class='littleHeader'>Test</div>
+					<ol start='13'>
+						<li><span class='choiceSpanCopy'></span>Do you have a documented plan or appoach on what will be automated?</li>
+						<li><span class='choiceSpanCopy'></span>Do you have all the necessary test automation development tools installed, configured and ready for iteration 1?</li>
+					</ol>
+					<li><span class='choiceSpanCopy'></span>Will you run the test automation on a continuous integration server?</li>
+					<li><span class='choiceSpanCopy'></span>Are you using existing test automation pattern(s)?</li>
+					<ol type='a'>
+						<li><span class='choiceSpanCopy'></span>If no, has your automation design been reviewed and approved by the Architect or H-Band Developer?  Please explain.</li>
+					</ol>
+				</div>
+				<div id='skip'>SKIP IF NONE APPLY</div>
+				<div id='data'>
+					<div id='dataHeader' class='littleHeader'>Data<br>
+					<span>Link to data specific considerations<a href='https://spot.nwie.net/group/ADCServiceCatalog/TechDomainConsiderations/mdwiki.html#!index.md'>Data</a></span>
+					</div>
+					<ol start='17'>
+						<li><span class='choiceSpanCopy'></span>Will you need to create or modify a new or existing database?</li>
+						<ol type='a'>
+							<li><span class='choiceSpanCopy'></span>Is a DBA engaged?</li>
+						</ol>
+						<li><span class='choiceSpanCopy'></span>Is the Data Integration framework understood?</li>
+						<li><span class='choiceSpanCopy'></span>Is the target Data Model understood?</li>
+						<li><span class='choiceSpanCopy'></span>Has the Data Mapping Document been defined? Does the document detail table names, joins, business rules such that the I0 estimate can be given?</li>
+						<li><span class='choiceSpanCopy'></span>If you are using Informatica, is the environment stood up and ready for use? </li>
+						<li><span class='choiceSpanCopy'></span>Are your laptops compatible with MDM?</li>
+					</ol>
+				</div>
+				<div id='skip'>SKIP IF NONE APPLY</div>
+				<div id='services'>
+					<div id='servicesHeader' class='littleHeader'>Services</div>
+					<span class='choiceSpanCopy'>Future Services Questions Here</span>
+				</div>
+				<div id='skip'>SKIP IF NONE APPLY</div>
+				<div id='package'>
+					<div id='packageHeader' class='littleHeader'>Package</div>
+					<span class='choiceSpanCopy'>Future Package Questions Here</span>
+				</div>
+			</div>
+			<input id="submitButton" type="submit" value="Submit">
+			</form>
+		</div>
+		<script src="jquery-1.12.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				// copies all contents of choiceSpan into choiceSpanCopy
+				// (hard coded because if using .choiceSpan, the copy only applies to the first span or div) 
+				$(".choiceSpanCopy").html("<select name='processList[]'><option value='0'>0 (N/A)</option><option value='1'>1 (Yes)</option><option value='2'>2 (In Progress)</option><option value='3'>3 (No)</option></select>");
+			});
+		</script>
+	</body>
+</html>
