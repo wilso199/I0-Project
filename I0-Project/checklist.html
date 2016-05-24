@@ -78,7 +78,8 @@
 		<script src="jquery-1.12.4.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				//copies all contents of choiceSpan into choiceSpanCopy
+				// copies all contents of choiceSpan into choiceSpanCopy
+				// (hard coded because if using .choiceSpan, the copy only applies to the first div) 
 				$(".choiceSpanCopy").html("<select name='processList[]'><option value='0'>0 (N/A)</option><option value='1'>1 (Yes)</option><option value='2'>2 (In Progress)</option><option value='3'>3 (No)</option></select>");
 			});
 		</script>
