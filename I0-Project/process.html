@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title>I0-Checklist</title>
+	</head>
+	<body>
+		<div id='header'>
+			<h1>I0 Checklist - Process</h1>
+		</div>
+		<div id='area'>
+			<h2>Process</h2>
+			<form action="dummy_url" method="POST">
+			<div id='process'>
+				<div id='requirements'>
+				<div id='requirementsHeader' class='littleHeader'>Requirements</div>
+					<ol>
+						<li><span id="choiceSpan"><select name="processList[]">
+							<option value="0">0 (N/A)</option>
+							<option value="1">1 (Yes)</option>
+							<option value="2">2 (In Progress)</option>
+							<option value="3">3 (No)</option>
+							</select></span>Has the team reviewed and agreed to the Requirements Management Approach (RMA) work product?
+						</li>
+						<li><span class='choiceSpanCopy'></span>Have you completed enough story card backlog to start iteration 1?</li>
+						<li><span class='choiceSpanCopy'></span>Will you be able to maintain a healthy backlog that will sustain work for the team?</li>
+					</ol>
+				</div>
+				<div id='Testing'>
+					<div id='testingHeader' class='littleHeader'>Testing</div>
+					<ol start="4">
+						<li><span class='choiceSpanCopy'></span>Is there a test strategy in place between the line and the project team? Test strategy should include all applicable methods: Unit, acceptance, integration, system, regression and performance testing.</li>
+						<ol type="a">
+							<li><span class='choiceSpanCopy'></span>If no, do you plan on completing a test strategy?  Please explain.</li>
+						</ol>
+						<li><span class='choiceSpanCopy'></span>Has the line identified and addressed test data needs?</li>
+					</ol>
+				</div>
+				<div id='Agile'>
+					<div id='agileHeader' class='littleHeader'>Agile</div>
+					<ol start='6'>
+						<li><span class='choiceSpanCopy'></span>Have you established a line cadence?</li>
+						<ol type="a">
+							<li><span class='choiceSpanCopy'></span>If you are changing it please explain.</li>
+						</ol>
+					</ol>
+				</div>
+				<div id='Team'>
+					<div id='teamHeader' class='littleHeader'>Team</div>
+					<ol start="7">
+						<li><span class='choiceSpanCopy'></span>Has the overall timeline and estimate been compared to the project funding estimate?</li>
+						<li><span class='choiceSpanCopy'></span>Have you baselined the release plan with the project timeline and team velocity?</li>
+						<li><span class='choiceSpanCopy'></span>Have the ADL and PM reviewed and agreed to the release plan?</li>
+						<li><span class='choiceSpanCopy'></span>Will the team provide a release commitment and a revised estimate at the commit gate (40% of DDIT)?</li>
+						<li><span class='choiceSpanCopy'></span>Has the warranty support period been considered in the team's estimate?</li>
+						<li><span class='choiceSpanCopy'></span>Do all  team members have tasks in Clarity to bill time?</li>
+						<li><span class='choiceSpanCopy'></span>Is the ADC spot site updated to reflect current project demand?</li>
+						<li><span class='choiceSpanCopy'></span>Is there a need to deviate from standard work?  If so, has it been requested through a waiver?</li>
+						<li><span class='choiceSpanCopy'></span>Will the Nationwide Line be conducting build to run transition?</li>
+						<ol type="a">
+							<li><span class='choiceSpanCopy'></span>If no, is there an agreement in place with the BSA App Suite Owner? Please explain.</li>
+						</ol>
+					</ol>
+				</div>
+				<div id="risk">
+					<div id='riskHeader' class='littleHeader'>Risk</div>
+					<ol start="16">
+						<li><span class='choiceSpanCopy'></span>Has the project team and the line collaborated on the risks and agreed on the appropriate risk-based contingency (financial and schedule) needed for the identified scope?</li>
+						<li><span class='choiceSpanCopy'></span>Are there any risks that prevent the team from starting work on the project?</li>
+						<ol type="a">
+							<li><span class='choiceSpanCopy'></span>If yes, is there a plan to mitigate the risk?</li>
+						</ol>
+					</ol>
+				</div>
+			</div>
+			<input id="submitButton" type="submit" value="Submit">
+			</form>
+		</div>
+		<script src="jquery-1.12.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				// copies all contents of choiceSpan into choiceSpanCopy
+				// (hard coded because if using .choiceSpan, the copy only applies to the first span or div) 
+				$(".choiceSpanCopy").html("<select name='processList[]'><option value='0'>0 (N/A)</option><option value='1'>1 (Yes)</option><option value='2'>2 (In Progress)</option><option value='3'>3 (No)</option></select>");
+			});
+		</script>
+	</body>
+</html>
